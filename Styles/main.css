@@ -1,0 +1,281 @@
+/* resets */
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 400px;
+}
+
+/* General Styles */
+
+body, input, button {
+  font-size: 14px;
+  font-family: arial, sans-serif;
+  color: #222;
+}
+
+body {
+  height: 100%;
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header {
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+main {
+  flex: 1 1 auto;
+  height: 100%;
+}
+
+footer {
+  width: 100%;
+  height:auto;
+  background: rgb(242,242,242);
+  padding: 0 20px; 
+  flex: 0 0 auto;
+}
+
+a {
+    cursor: pointer;
+    text-decoration-line: none;
+    text-decoration-color: rgb(34,34,34);
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/****************/
+/* Header stuff */
+/****************/
+
+#headernav{
+  display: flex;
+  padding: 6px;
+  justify-content: space-between;
+  align-items: center;
+  height: 48px;
+}
+
+
+#headerleft {
+  display: flex;
+}
+
+#headerright{
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  padding: 0 0 4px 0;
+}
+
+#headerpicsright {
+  display: flex;
+  align-items:center;
+}
+
+#dots {
+  display: inline;
+  border-radius: 100%;
+  height: 36px;
+  width: auto;
+  padding: 2px;
+}
+
+#dots:hover, #person:hover {
+  background: rgb(223,225,229);
+}
+
+#person {
+  display: inline;
+  border-radius: 100%;
+  height: 36px;
+  width: auto;
+  padding: 2px;
+}
+
+.headerlink {
+  color: rgb(34,34,34);
+  margins: 5px 0px 5px 5px;
+  padding: 5px;
+}
+
+.headerlink:first-of-type {
+  margins: 15px 0px 5px 5px;
+}
+
+
+/****************/
+/*  Main stuff  */
+/****************/
+
+#maincontent {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#googlelogo {
+  object-position: center bottom;
+  padding: 16px;
+}
+
+#googleinput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchbar {
+  display: flex;
+  align-items: center;
+  border-radius: 24px;
+  border-color: rgb(223,225,229);
+  border-style: solid;
+  border-width: 1px;
+  height: auto;
+  width: auto;
+  max-width: 584px;
+}
+
+#searchbar:hover {
+  box-shadow: 0 0px 4px 0 rgba(0, 0, 0, 0.2), 0 0px 8px 0 rgba(0, 0, 0, 0.19);
+}
+
+#magcontainer {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  margin-left: 5px;
+  color: #9aa0a6;
+}
+
+#magnifier {
+  color: #9aa0a6;  
+}
+
+
+#searchinput {
+  width: 400px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border: none;
+  height: 34px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+#miccontainer {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  padding: 5px;
+  margin-right: 5px;
+  color: #9aa0a6;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  padding: 0 16px 0 16px;
+  margin: 5px;
+  height: 36px;
+  background: rgb(248,249,250)
+}
+
+.searchbutton:hover {
+  border-color: rgb(223,225,229);
+  border-style: solid;
+  border-width: 1px;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+}
+
+/****************/
+/* Footer stuff */
+/****************/
+
+#footernav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+}
+
+#carboncomment {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100%;
+  flex-wrap: nowrap;
+}
+
+#leafpic {
+  width: 1em;
+  padding: 5px;
+}
+
+#footerleft {
+  min-width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+#footerright {
+  min-width: 400px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+
+.footerlink {
+  color: #70757a;
+}
+
+/* Footer sections inline */
+@media (min-width: 1000px) {
+  #footerleft {
+    order: 1;
+  }
+  
+  #carboncomment {    
+    order: 2;
+  }
+  
+  #footerright {   
+    order: 3;    
+  }
+  
+  #footernav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: nowrap;
+  }  
+}
